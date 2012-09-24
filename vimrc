@@ -31,10 +31,10 @@ set tags=tags;
 set backup
 
 "locate backup directory
-set backupdir=~/.vim/backup
+set backupdir=~/vimbackup
 
 "locate swap file directory
-set dir=~/.vim/tmp
+set dir=~/vimtmp
 
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python set omnifunc=pysmell#Complete
