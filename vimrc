@@ -66,8 +66,53 @@ set completeopt=menuone,longest,preview
 set colorcolumn=80
 highlight ColorColumn ctermbg=lightgrey
 
-" For local replace
-nnoremap gr gd[{V%:s/<C-R>///gc<left><left><left>
 
-" For global replace
-nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+"Don't lose selected lines
+vnoremap < <gv
+vnoremap > >gv
+
+" Making arrow key usefull - switch buffer and tab
+nmap <up> :bp<CR>
+nmap <down> :bn<CR>
+nmap <left> :tabp<CR>
+nmap <right> :tabn<CR>
+
+" Open new tab on ctrl+t
+map <C-T> :tabnew<CR>
+
+" update current working directory 
+autocmd BufEnter * lcd %:p:h
+
+" highlight search text - get rid of highlight :noh
+set hlsearch
+
+"Toggle Search Highlights 
+noremap <space> :set hlsearch! hlsearch?<CR>
+
+" \] to toggle the file browser
+noremap <silent>\] :NERDTreeToggle<cr>
+
+" Auto indent after pasting 
+nnoremap <leader>p p
+nnoremap <leader>P P
+nnoremap p p'[v']=
+nnoremap P P'[v']=
+
+"The Smash Escape 
+inoremap jj <Esc>
+
+"Insert blank lines without going into insert mode 
+nmap t o<ESC>k
+nmap T O<ESC>j
+
+"In xterm, set the name of the current file as title 
+set title
+
+"Remap leader to comma 
+let mapleader = ","
+
+"Improve up/down movement on wrapped lines 
+nnoremap j gj
+nnoremap k gk
+
+
