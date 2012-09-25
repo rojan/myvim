@@ -115,4 +115,6 @@ let mapleader = ","
 nnoremap j gj
 nnoremap k gk
 
+" python syntax checker
+let g:syntastic_python_checker = 'pylint'
 
