@@ -77,9 +77,6 @@ nmap <down> :bn<CR>
 nmap <left> :tabp<CR>
 nmap <right> :tabn<CR>
 
-" Open new tab on ctrl+t
-map <C-T> :tabnew<CR>
-
 " update current working directory 
 autocmd BufEnter * lcd %:p:h
 
