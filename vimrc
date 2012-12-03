@@ -115,3 +115,6 @@ nnoremap k gk
 " python syntax checker
 let g:syntastic_python_checker = 'pylint'
 
+" colorscheme solarized
+"let g:solarized_termcolors=256
+colorscheme solarized
