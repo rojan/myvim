@@ -71,12 +71,6 @@ highlight ColorColumn ctermbg=lightgrey
 vnoremap < <gv
 vnoremap > >gv
 
-" Making arrow key usefull - switch buffer and tab
-nmap <up> :bp<CR>
-nmap <down> :bn<CR>
-nmap <left> :tabp<CR>
-nmap <right> :tabn<CR>
-
 " update current working directory 
 autocmd BufEnter * lcd %:p:h
 
