@@ -106,7 +106,6 @@ nmap T O<ESC>j
 "In xterm, set the name of the current file as title 
 set title
 
-
 "Improve up/down movement on wrapped lines 
 nnoremap j gj
 nnoremap k gk
@@ -124,21 +123,21 @@ let g:CommandTCancelMap=['<ESC>','<C-c>']
 "completion popup doesn’t select first item and typing new letters updates the completion list.
 set completeopt=longest,menuone
 
+"Load Django autocompletion. 
+function! LoadDjango(arg1)
 py << EOF
 import os.path
 import sys
 import vim
 
-# SET THIS MANUALLY
-# =================
-DJANGO_SETTINGS_MODULE='tgnepal.settings'
-
-project_base_dir = os.environ['VIRTUAL_ENV']
-
-sys.path.insert(0, project_base_dir)
-
-activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-execfile(activate_this, dict(__file__=activate_this))
-
-os.environ['DJANGO_SETTINGS_MODULE'] = DJANGO_SETTINGS_MODULE
+DJANGO_SETTINGS_MODULE=vim.eval("a:arg1") + '.settings'
+print DJANGO_SETTINGS_MODULE
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+    os.environ['DJANGO_SETTINGS_MODULE'] = DJANGO_SETTINGS_MODULE
 EOF
+endfunction
+"End of LoadDjango function
