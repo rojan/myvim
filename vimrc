@@ -1,6 +1,13 @@
+"Remap leader to comma 
+let mapleader = ","
+
 "for color scheme"
 set t_Co=256
 
+set background=dark
+
+"set no auto change directory
+"set noautochdir
 
 filetype plugin on
 
@@ -81,7 +88,7 @@ set hlsearch
 noremap <space> :set hlsearch! hlsearch?<CR>
 
 " \] to toggle the file browser
-noremap <silent>,] :NERDTreeToggle<cr>
+noremap <silent><leader>] :NERDTreeToggle<cr>
 
 " Auto indent after pasting 
 nnoremap <leader>p p
@@ -99,8 +106,6 @@ nmap T O<ESC>j
 "In xterm, set the name of the current file as title 
 set title
 
-"Remap leader to comma 
-let mapleader = ","
 
 "Improve up/down movement on wrapped lines 
 nnoremap j gj
