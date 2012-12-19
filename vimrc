@@ -39,8 +39,8 @@ set backupdir=~/vimbackup
 "locate swap file directory
 set dir=~/vimtmp
 
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType python set omnifunc=pysmell#Complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType python set omnifunc=pysmell#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -116,4 +116,24 @@ colorscheme solarized
 "Escape from command-t list
 let g:CommandTCancelMap=['<ESC>','<C-c>']
 
-"set noautochdir
+"completion popup doesn’t select first item and typing new letters updates the completion list.
+set completeopt=longest,menuone
+
+py << EOF
+import os.path
+import sys
+import vim
+
+# SET THIS MANUALLY
+# =================
+DJANGO_SETTINGS_MODULE='tgnepal.settings'
+
+project_base_dir = os.environ['VIRTUAL_ENV']
+
+sys.path.insert(0, project_base_dir)
+
+activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+execfile(activate_this, dict(__file__=activate_this))
+
+os.environ['DJANGO_SETTINGS_MODULE'] = DJANGO_SETTINGS_MODULE
+EOF
