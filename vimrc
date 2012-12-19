@@ -23,7 +23,10 @@ set ofu=syntaxcomplete#Complete
 "}
 
 "Ctags {
-set tags=tags;
+"set tags=tags;
+set tags=./tags,$VIRTUAL_ENV/tags;/
+nmap <F12> :!ctags -f $VIRTUAL_ENV/tags -R $VIRTUAL_ENV/lib/python2.7/site-packages /home/rojan/.virtualenvs/mysite &> /dev/null & disown<CR>
+
 "}
 
 
@@ -71,9 +74,6 @@ highlight ColorColumn ctermbg=lightgrey
 vnoremap < <gv
 vnoremap > >gv
 
-" update current working directory 
-autocmd BufEnter * lcd %:p:h
-
 " highlight search text - get rid of highlight :noh
 set hlsearch
 
@@ -115,3 +115,5 @@ colorscheme solarized
 
 "Escape from command-t list
 let g:CommandTCancelMap=['<ESC>','<C-c>']
+
+"set noautochdir
