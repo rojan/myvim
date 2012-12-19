@@ -36,7 +36,6 @@ nmap <F12> :!ctags -f $VIRTUAL_ENV/tags -R $VIRTUAL_ENV/lib/python2.7/site-packa
 
 "}
 
-
 "Keep backup files
 set backup
 
@@ -75,7 +74,6 @@ set completeopt=menuone,longest,preview
 "Set colorcolumn to 80
 set colorcolumn=80
 highlight ColorColumn ctermbg=lightgrey
-
 
 "Don't lose selected lines
 vnoremap < <gv
