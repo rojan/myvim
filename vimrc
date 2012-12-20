@@ -85,7 +85,7 @@ set hlsearch
 "Toggle Search Highlights 
 noremap <space> :set hlsearch! hlsearch?<CR>
 
-" \] to toggle the file browser
+" to toggle the file browser
 noremap <silent><leader>] :NERDTreeToggle<cr>
 
 " Auto indent after pasting 
