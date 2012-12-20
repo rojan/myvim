@@ -121,7 +121,8 @@ let g:CommandTCancelMap=['<ESC>','<C-c>']
 "completion popup doesn’t select first item and typing new letters updates the completion list.
 set completeopt=longest,menuone
 
-"Load Django autocompletion. 
+"Load Django autocompletion.
+" arg1 - name of project 
 function! LoadDjango(arg1)
 py << EOF
 import os.path
