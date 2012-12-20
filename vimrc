@@ -87,6 +87,8 @@ noremap <space> :set hlsearch! hlsearch?<CR>
 
 " to toggle the file browser
 noremap <silent><leader>] :NERDTreeToggle<cr>
+"Ignore .pyc file
+let NERDTreeIgnore = ['\.pyc$']
 
 " Auto indent after pasting 
 nnoremap <leader>p p
