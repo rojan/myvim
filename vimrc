@@ -31,7 +31,7 @@ set ofu=syntaxcomplete#Complete
 
 "Ctags {
 "set tags=tags;
-set tags=./tags,$VIRTUAL_ENV/tags;/
+set tags=tags,$VIRTUAL_ENV/tags;/
 nmap <F12> :!ctags -f $VIRTUAL_ENV/tags -R $VIRTUAL_ENV/lib/python2.7/site-packages /home/rojan/.virtualenvs/mysite &> /dev/null & disown<CR>
 
 "}
@@ -111,7 +111,7 @@ nnoremap j gj
 nnoremap k gk
 
 " python syntax checker
-let g:syntastic_python_checker = 'pylint'
+"let g:syntastic_python_checker = 'pylint'
 
 " colorscheme solarized
 "let g:solarized_termcolors=256
