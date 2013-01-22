@@ -142,3 +142,6 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 endfunction
 "End of LoadDjango function
+
+"find and replace selected text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
