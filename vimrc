@@ -1,10 +1,7 @@
 "Remap leader to comma 
 let mapleader = ","
 
-"for color scheme"
-set t_Co=256
-
-set background=dark
+set background=light
 
 "set no auto change directory
 "set noautochdir
@@ -114,7 +111,7 @@ nnoremap k gk
 "let g:syntastic_python_checker = 'pylint'
 
 " colorscheme solarized
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 colorscheme solarized
 
 "Escape from command-t list
