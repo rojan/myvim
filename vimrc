@@ -1,7 +1,11 @@
 "Remap leader to comma 
 let mapleader = ","
 
-set background=light
+set t_Co=256
+set background=dark
+
+"map sort function to a key
+vnoremap <leader>s :sort<CR>
 
 "set no auto change directory
 "set noautochdir
@@ -15,6 +19,8 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+set wildignore=*.swp,*.bak,*.pyc,*.jar,*.gif,*.png,*.jpg
 
 "syntax highlight enable"
 syntax enable
@@ -81,6 +87,12 @@ set hlsearch
 
 "Toggle Search Highlights 
 noremap <space> :set hlsearch! hlsearch?<CR>
+noremap <silent><Leader>/ :nohls<CR>
+
+
+
+" automatically reload vimrc when it's saved
+au BufWritePost .vimrc so ~/.vimrc
 
 " to toggle the file browser
 noremap <silent><leader>] :NERDTreeToggle<cr>
@@ -110,9 +122,6 @@ nnoremap k gk
 " python syntax checker
 "let g:syntastic_python_checker = 'pylint'
 
-" colorscheme solarized
-let g:solarized_termcolors=256
-colorscheme solarized
 
 "Escape from command-t list
 let g:CommandTCancelMap=['<ESC>','<C-c>']
@@ -142,3 +151,7 @@ endfunction
 
 "find and replace selected text
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+" colorscheme solarized
+"let g:solarized_termcolors=256
+colorscheme solarized
