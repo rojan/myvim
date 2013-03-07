@@ -56,7 +56,9 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 "xclip package needed to copy from system clipboard
+"copy
 vmap <F6> :!xclip -f -sel clip<CR>
+"paste
 map <F7> :-1r !xclip -o -sel clip<CR>
 
 "pathogen
