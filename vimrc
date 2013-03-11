@@ -34,7 +34,7 @@ set ofu=syntaxcomplete#Complete
 
 "Ctags {
 "set tags=tags;
-set tags=tags,$VIRTUAL_ENV/tags;/
+set tags=.tags,$VIRTUAL_ENV/.tags;/
 nmap <F12> :!ctags -f $VIRTUAL_ENV/.tags -R $VIRTUAL_ENV/lib/python2.7/site-packages /home/rojan/.virtualenvs/mysite &> /dev/null & disown<CR>
 
 "Keep backup files
