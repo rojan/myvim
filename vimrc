@@ -14,6 +14,8 @@ filetype plugin on
 
 filetype indent on
 
+set foldmethod=manual
+
 "4 space for tab"
 set smartindent
 set tabstop=4
@@ -52,6 +54,7 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+set complete-=i
 
 "xclip package needed to copy from system clipboard
 "copy
@@ -159,3 +162,17 @@ colorscheme solarized
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+"Insert <Tab> or complete identifier
+" if the cursor is after a keyword character
+function MyTabOrComplete()
+    let col = col('.')-1
+    if !col || getline('.')[col-1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<C-N>"
+    endif
+endfunction
+inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
+
+let g:UltiSnipsSnippetDirectories=["/home/rojan/.ultisnips/","bundle/ultisnips/UltiSnips/"]
