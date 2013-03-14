@@ -30,9 +30,6 @@ syntax enable
 "wrap text when line exceeds more than the windows size"
 set wrap
 
-"omni auto complete {
-set ofu=syntaxcomplete#Complete
-"}
 
 "Ctags {
 "set tags=tags;
@@ -48,13 +45,25 @@ set backupdir=~/vimbackup
 "locate swap file directory
 set dir=~/vimtmp
 
+
+"completion popup doesn’t select first item and typing new letters updates the completion list.
+set completeopt=menuone,longest,preview
+"if you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" " insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 "autocmd FileType python set omnifunc=pysmell#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-set complete-=i
+"set complete-=i
+"omni auto complete {
+set ofu=syntaxcomplete#Complete
+"}
 
 "xclip package needed to copy from system clipboard
 "copy
@@ -75,7 +84,6 @@ let Tlist_Show_One_File = 1
 let Tlist_Use_Right_Window = 1
 
 let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
 
 "Set colorcolumn to 80
 set colorcolumn=80
@@ -129,8 +137,6 @@ nnoremap k gk
 "Escape from command-t list
 let g:CommandTCancelMap=['<ESC>','<C-c>']
 
-"completion popup doesn’t select first item and typing new letters updates the completion list.
-set completeopt=longest,menuone
 
 "Load Django autocompletion.
 " arg1 - name of project 
