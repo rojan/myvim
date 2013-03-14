@@ -159,9 +159,11 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "let g:solarized_termcolors=256
 colorscheme solarized
 
+"Ultisnips settings
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories=["/home/rojan/.ultisnips/","bundle/ultisnips/UltiSnips/"]
 
 "Insert <Tab> or complete identifier
 " if the cursor is after a keyword character
@@ -175,4 +177,5 @@ function MyTabOrComplete()
 endfunction
 inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
 
-let g:UltiSnipsSnippetDirectories=["/home/rojan/.ultisnips/","bundle/ultisnips/UltiSnips/"]
+"mapping for Taglist
+nmap <C-l> :Tlist<CR>
