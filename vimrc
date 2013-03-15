@@ -21,7 +21,6 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
 set wildignore=*.swp,*.bak,*.pyc,*.jar,*.gif,*.png,*.jpg
 
 "syntax highlight enable"
@@ -29,7 +28,6 @@ syntax enable
 
 "wrap text when line exceeds more than the windows size"
 set wrap
-
 
 "Ctags {
 "set tags=tags;
@@ -97,10 +95,8 @@ vnoremap > >gv
 set hlsearch
 
 "Toggle Search Highlights 
-noremap <space> :set hlsearch! hlsearch?<CR>
+"noremap <space> :set hlsearch! hlsearch?<CR>
 noremap <silent><Leader>/ :nohls<CR>
-
-
 
 " automatically reload vimrc when it's saved
 au BufWritePost .vimrc so ~/.vimrc
@@ -130,13 +126,8 @@ set title
 nnoremap j gj
 nnoremap k gk
 
-" python syntax checker
-"let g:syntastic_python_checker = 'pylint'
-
-
 "Escape from command-t list
 let g:CommandTCancelMap=['<ESC>','<C-c>']
-
 
 "Load Django autocompletion.
 " arg1 - name of project 
