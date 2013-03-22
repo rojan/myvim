@@ -175,4 +175,4 @@ endfunction
 inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
 
 "mapping for Taglist
-nmap <C-l> :Tlist<CR>
+nmap <leader>l :Tlist<CR>
