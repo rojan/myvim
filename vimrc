@@ -151,6 +151,7 @@ endfunction
 
 "find and replace selected text
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+vnoremap <C-f> "hy:vimgrep "<C-r>h" **/*.* \| copen<left><left><left><left><left><left><left><left><left>
 
 " colorscheme solarized
 "let g:solarized_termcolors=256
