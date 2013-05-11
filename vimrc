@@ -175,18 +175,4 @@ function MyTabOrComplete()
 endfunction
 inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
 
-"mapping for Taglist
-nmap <leader>l :Tlist<CR>
-set statusline=
-set statusline=%f         " Path to the file
-set statusline+=\ -\      " Separator
-set statusline+=%y        " Filetype of the file
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
-set statusline+=%{&ff}] "file format
-set statusline+=%r      "read only flag
-set statusline+=%=      "left/right separator
-set statusline+=\ [line\ %l\/%L]
-set statusline+=%0*\ \ %m%r%w\ %P
-set statusline+=\ buffer
-set statusline+=\ -\      " Separator
-set statusline+=%-3.3n
+set rtp+=~/opt/powerline/powerline/bindings/vim
