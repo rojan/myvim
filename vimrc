@@ -22,6 +22,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set wildignore=*.swp,*.bak,*.pyc,*.jar,*.gif,*.png,*.jpg
+set number
 
 "syntax highlight enable"
 syntax enable
@@ -71,9 +72,6 @@ map <F7> :-1r !xclip -o -sel clip<CR>
 
 "pathogen
 call pathogen#infect()
-
-"user mouser pointer
-set mouse=a
 
 "Tag list (Tlist) show tags of current buffer
 let Tlist_Show_One_File = 1
