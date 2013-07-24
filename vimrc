@@ -53,6 +53,7 @@ set completeopt=menuone,longest,preview
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+"python import pysmell
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 "autocmd FileType python set omnifunc=pysmell#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
