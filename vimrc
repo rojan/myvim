@@ -164,14 +164,17 @@ let g:UltiSnipsSnippetDirectories=["/home/rojan/.ultisnips/","bundle/ultisnips/U
 
 "Insert <Tab> or complete identifier
 " if the cursor is after a keyword character
-function MyTabOrComplete()
-    let col = col('.')-1
-    if !col || getline('.')[col-1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<C-N>"
-    endif
-endfunction
-inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
+"function MyTabOrComplete()
+    "let col = col('.')-1
+    "if !col || getline('.')[col-1] !~ '\k'
+        "return "\<tab>"
+    "else
+        "return "\<C-N>"
+    "endif
+"endfunction
+"inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
 
 set rtp+=~/opt/powerline/powerline/bindings/vim
+
+"jedt settings
+let g:jedi#popup_on_dot=0
