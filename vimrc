@@ -3,7 +3,7 @@ let mapleader = ","
 
 set t_Co=256
 set background=dark
-
+let html_no_rendering=1
 "map sort function to a key
 vnoremap <leader>s :sort<CR>
 
@@ -90,6 +90,7 @@ highlight ColorColumn ctermbg=lightgrey
 vnoremap < <gv
 vnoremap > >gv
 
+
 " highlight search text - get rid of highlight :noh
 set hlsearch
 
@@ -175,6 +176,7 @@ let g:UltiSnipsSnippetDirectories=["../dotfiles/ultisnips/","bundle/ultisnips/Ul
 "inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
 
 set rtp+=~/opt/powerline/powerline/bindings/vim
+set laststatus=2
 
 "jedt settings
 let g:jedi#popup_on_dot=0
