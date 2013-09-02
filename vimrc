@@ -160,7 +160,7 @@ colorscheme solarized
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsSnippetDirectories=["/home/rojan/.ultisnips/","bundle/ultisnips/UltiSnips/"]
+let g:UltiSnipsSnippetDirectories=["../dotfiles/ultisnips/","bundle/ultisnips/UltiSnips/"]
 
 "Insert <Tab> or complete identifier
 " if the cursor is after a keyword character
