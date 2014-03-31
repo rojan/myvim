@@ -161,7 +161,7 @@ colorscheme solarized
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsSnippetDirectories=["../dotfiles/ultisnips/","bundle/ultisnips/UltiSnips/"]
+let g:UltiSnipsSnippetDirectories=["../dotfiles/ultisnips/","bundle/vim-snippets/UltiSnips/"]
 
 "Insert <Tab> or complete identifier
 " if the cursor is after a keyword character
@@ -184,3 +184,7 @@ let g:jedi#popup_on_dot=0
 "Eclim settings
 nnoremap <silent> <buffer> <cr> :PhpSearchContext<cr>
 let g:EclimCompletionMethod = 'omnifunc'
+
+"Tern settings
+"let g:tern_map_keys=1
+"let g:tern_show_arguments_hints='on_hold'
