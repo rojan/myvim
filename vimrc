@@ -1,6 +1,9 @@
 "Remap leader to comma 
 let mapleader = ","
 
+set relativenumber
+set ignorecase
+set smartcase
 set t_Co=256
 set background=dark
 let html_no_rendering=1
@@ -91,6 +94,8 @@ vnoremap < <gv
 vnoremap > >gv
 
 
+set incsearch
+set showmatch
 " highlight search text - get rid of highlight :noh
 set hlsearch
 
