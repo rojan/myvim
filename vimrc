@@ -184,11 +184,10 @@ set rtp+=~/opt/powerline/powerline/bindings/vim
 set laststatus=2
 
 "jedt settings
-let g:jedi#popup_on_dot=0
-
+"let g:jedi#popup_on_dot=0 
 "Eclim settings
-nnoremap <silent> <buffer> <cr> :PhpSearchContext<cr>
-let g:EclimCompletionMethod = 'omnifunc'
+"nnoremap <silent> <buffer> <cr> :PhpSearchContext<cr>
+"let g:EclimCompletionMethod = 'omnifunc'
 
 "Tern settings
 "let g:tern_map_keys=1
